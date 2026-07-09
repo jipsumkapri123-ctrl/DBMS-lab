@@ -1,0 +1,33 @@
+-- LAB 1: DDL Commands and Constraints
+
+CREATE DATABASE lab1_db;
+USE lab1_db;
+
+CREATE TABLE Employee(
+  E_ID INT NOT NULL,
+  E_NAME VARCHAR(25) NOT NULL,
+  E_ADDRESS VARCHAR(50),
+  D_ID INT
+);
+
+ALTER TABLE Employee ADD JoinDate INT;
+
+ALTER TABLE Employee MODIFY JoinDate VARCHAR(25);
+
+CREATE TABLE Department(
+  D_ID INT NOT NULL PRIMARY KEY,
+  D_NAME VARCHAR(15)
+);
+
+ALTER TABLE Employee
+ADD CONSTRAINT fkey
+FOREIGN KEY (D_ID)
+REFERENCES Department(D_ID);
+
+ALTER TABLE Employee DROP COLUMN JoinDate;
+
+TRUNCATE TABLE Employee;
+
+ALTER TABLE Employee DROP FOREIGN KEY fkey;
+
+DROP TABLE Department;
