@@ -1,6 +1,6 @@
  # DBMS Lab Assignments
 
-## 👨‍🎓 Student Name: YOUR NAME
+## 👨‍🎓 Student Name: Jipsum Kapri
 ## 📚 Subject: DBMS
 
 ---
